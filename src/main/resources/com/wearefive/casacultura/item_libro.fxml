@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.wearefive.casacultura.ItemLibroController"
+      alignment="CENTER"
+      spacing="8" style="-fx-padding: 10; -fx-background-color: #FFFFFF;"
+      prefWidth="180" prefHeight="240" onMouseClicked="#onLibroClick">
+
+    <ImageView fx:id="imagenLibro" fitWidth="100" fitHeight="150" preserveRatio="true"/>
+    <Label fx:id="tituloLabel" style="-fx-font-weight: bold;" wrapText="true"/>
+    <Label fx:id="autorLabel" wrapText="true"/>
+    <Label fx:id="anioLabel"/>
+    
+</VBox>

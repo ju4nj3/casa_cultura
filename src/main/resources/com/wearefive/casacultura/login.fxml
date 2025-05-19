@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wearefive.casacultura.LoginController"
+            prefWidth="1366" prefHeight="768">
+
+    <ImageView preserveRatio="true"
+               AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <image>
+            <Image url="@/images/fondo_app.jpg" />
+        </image>
+    </ImageView>
+
+    <VBox spacing="10" alignment="CENTER"
+          AnchorPane.topAnchor="100" AnchorPane.leftAnchor="150"
+          AnchorPane.rightAnchor="150" AnchorPane.bottomAnchor="100"
+          style="-fx-background-color: rgba(0, 0, 0, 0.6); -fx-background-radius: 10; -fx-padding: 20;">
+        
+        <Label text="Casa de la Cultura" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: white;" />
+        <Label text="Iniciar sesión" style="-fx-font-size: 18px; -fx-text-fill: white;" />
+
+        <Label text="Introduce tu ID Usuario" style="-fx-text-fill: white;" />
+        <TextField fx:id="tfUsuario" promptText="ID Usuario" maxWidth="200"/>
+
+        <Button text="Entrar" onAction="#login" maxWidth="200" defaultButton="true" />
+
+    </VBox>
+
+</AnchorPane>

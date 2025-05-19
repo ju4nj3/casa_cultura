@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wearefive.casacultura.UsuariosController"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <!-- Imagen de fondo -->
+    <ImageView preserveRatio="true" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <image>
+            <Image url="@/images/fondo_app.jpg" />
+        </image>
+    </ImageView>
+    
+    <!-- Capa semitransparente con contenido -->
+    <VBox spacing="20" style="-fx-background-color: rgba(0, 0, 0, 0.6); -fx-padding: 20;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+            
+        <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+            <Label text="Usuarios" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" />
+
+            <HBox spacing="10">
+                <TextField fx:id="tfBuscar" promptText="Buscar usuario..." HBox.hgrow="ALWAYS" />
+            </HBox>
+        </VBox>
+
+        <TableView fx:id="tvUsuarios" VBox.vgrow="ALWAYS"
+                   AnchorPane.topAnchor="100" AnchorPane.leftAnchor="20"
+                   AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50" />
+                <TableColumn fx:id="colDNINIE" text="DNI/NIE" prefWidth="100" /> 
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="100" />     
+                <TableColumn fx:id="colApellido" text="Apellido" prefWidth="100" />            
+                <TableColumn fx:id="colSexo" text="Sexo" prefWidth="150" />
+                <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100" />
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="200" />
+                <TableColumn fx:id="colComentario" text="Comentario" prefWidth="800" />
+            </columns>
+        </TableView>
+    
+    
+        <!-- Botón volver -->
+        <HBox alignment="BOTTOM_RIGHT">
+            <Button onAction="#onVolverClick" text="Volver" />
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>

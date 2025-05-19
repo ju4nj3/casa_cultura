@@ -1,0 +1,320 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide empty members
+class PrestamosController {
+    - tfBuscar : TextField
+    - tvLibrosPrestados : TableView<Rental>
+    - listaPrestamos : ObservableList<Rental>
+    + initialize()
+}
+class LibrosController {
+    - apLibros : AnchorPane
+    - tfBuscar : TextField
+    - tvLibros : TableView<Book>
+    - btnVolver : Button
+    - listaLibros : ObservableList<Book>
+    + initialize()
+}
+class UsuariosController {
+    - tfBuscar : TextField
+    - tvUsuarios : TableView<User>
+    - listaUsuarios : ObservableList<User>
+    + initialize()
+}
+class MainController {
+    - lblTitulo : Label
+    - lblFechaHora : Label
+    - lblNombre : Label
+    - lblEmail : Label
+    - lblDniNie : Label
+    - lblTelefono : Label
+    - lblSexo : Label
+    - lblFechaNacimiento : Label
+    - lblComentario : Label
+    - ivUsuario : ImageView
+    - gridLibros : GridPane
+    - tvLibrosPrestados : TableView<Rental>
+    + initialize()
+    + getLibrosPorGeneros()
+    + getLibrosPorTitulos()
+}
+class PanelController {
+    - lblTitulo : Label
+    - lblFechaHora : Label
+    - lblUsuarios : Label
+    - lblLibros : Label
+    - lblPrestamos : Label
+    - lblValoraciones : Label
+    - tvLibrosAlquilados : TableView<Rental>
+    + initialize()
+}
+class ItemLibroController {
+    - imagenLibro : ImageView
+    - tituloLabel : Label
+    - autorLabel : Label
+    - anioLabel : Label
+    - libro : Book
+    - paginaAnterior : String
+    + setLibro()
+    + setPaginaAnterior()
+}
+class EstadisticasController {
+    - pieChartSexos : PieChart
+    - pieChartEdades : PieChart
+    - barChartValoraciones : BarChart
+    - barCharPrestados : BarChart
+    - pieChartDevoluciones : PieChart
+    + initialize()
+}
+class LibroController {
+    - apLibro : AnchorPane
+    - ivImagenLibroContainer : VBox
+    - ivImagenLibro : ImageView
+    - lblTitulo : Label
+    - lblAutores : Label
+    - lblOriginalTitle : Label
+    - lblAñoPublicacion : Label
+    - lblIdioma : Label
+    - lblIsbn : Label
+    - lblGeneros : Label
+    - lblValoracion : Label
+    - lblAlquiler : Label
+    - btnAlquilar : Button
+    - btnVolver : Button
+    + initialize()
+}
+class App {
+    + start()
+}
+Application <|-- App
+class LoginController {
+    - tfUsuario : TextField
+}
+class UsuarioController {
+    - lblNombre : Label
+    - lblEmail : Label
+    - lblDniNie : Label
+    - lblTelefono : Label
+    - lblSexo : Label
+    - lblFechaNacimiento : Label
+    - lblComentario : Label
+    - ivUsuario : ImageView
+    - tvLibrosPrestados : TableView<Rental>
+    + initialize()
+}
+class Apriori {
+}
+class RatingsRepository {
+    + getValores()
+    + getTotal()
+    + getLibrosMasValorados()
+}
+BaseRepository <|-- RatingsRepository
+class BooksRepository {
+    - query : TypedQuery
+    + getPredicadoWHERE()
+    + getAll()
+    + getLista()
+    + getId()
+    + getTotal()
+    + getLibrosRecomendados()
+    + getLibrosPorGeneros()
+    + getLibrosPorComentarios()
+    + getLibrosPorTitulos()
+}
+BaseRepository <|-- BooksRepository
+class BaseRepository {
+    - emf : EntityManagerFactory
+    + em : EntityManager
+    - textoBuscar : String
+    - maximoResultados : Integer
+    + getEntityManager()
+    + setEntityManager()
+    + getTextoBuscar()
+    + setTextoBuscar()
+    + getMaximoResultados()
+    + setMaximoResultados()
+    + close()
+}
+class UsersRepository {
+    + getAll()
+    + getId()
+    + getTotal()
+}
+BaseRepository <|-- UsersRepository
+class RentalsRepository {
+    + getLista()
+    + getListaPorIdUsuario()
+    + getTransacciones()
+    + getAlquileresActivos()
+    + getId()
+    + Guardar()
+    + getTotal()
+    + getLibrosMasPrestados()
+}
+BaseRepository <|-- RentalsRepository
+class BookRating {
+    - total : Long
+    - promedio : Double
+    + getTotal()
+    + setTotal()
+    + getPromedio()
+    + setPromedio()
+}
+class User {
+    - userId : Integer
+    - sexo : String
+    - comentario : String
+    - fechaNacimiento : String
+    - nombre : String
+    - apellido : String
+    - email : String
+    - dniNie : String
+    - telefono : String
+    - admin : boolean
+    - ratingList : List<Rating>
+    - rentalList : List<Rental>
+    + getUserId()
+    + setUserId()
+    + getSexo()
+    + setSexo()
+    + getComentario()
+    + setComentario()
+    + getFechaNacimiento()
+    + setFechaNacimiento()
+    + getNombre()
+    + setNombre()
+    + getApellido()
+    + setApellido()
+    + getEmail()
+    + setEmail()
+    + getDniNie()
+    + setDniNie()
+    + getTelefono()
+    + setTelefono()
+    + getAdmin()
+    + setAdmin()
+    + getRatingList()
+    + setRatingList()
+    + getRentalList()
+    + setRentalList()
+    + hashCode()
+    + equals()
+    + toString()
+    + getNombreApellido()
+}
+class Book {
+    - isbn : String
+    - authors : String
+    - originalPublicationYear : Integer
+    - originalTitle : String
+    - title : String
+    - languageCode : String
+    - imageUrl : String
+    - bookId : Integer
+    - genreList : List<Genre>
+    - copyList : List<Copy>
+    + getIsbn()
+    + setIsbn()
+    + getAuthors()
+    + setAuthors()
+    + getOriginalPublicationYear()
+    + setOriginalPublicationYear()
+    + getOriginalTitle()
+    + setOriginalTitle()
+    + getTitle()
+    + setTitle()
+    + getLanguageCode()
+    + setLanguageCode()
+    + getImageUrl()
+    + setImageUrl()
+    + getBookId()
+    + setBookId()
+    + getGenreList()
+    + setGenreList()
+    + getCopyList()
+    + setCopyList()
+    + hashCode()
+    + equals()
+    + toString()
+}
+class Genre {
+    - genreId : Integer
+    - name : String
+    - bookList : List<Book>
+    + getGenreId()
+    + setGenreId()
+    + getName()
+    + setName()
+    + getBookList()
+    + setBookList()
+    + hashCode()
+    + equals()
+    + toString()
+}
+class Rating {
+    # ratingPK : RatingPK
+    - rating : int
+    - copy : Copy
+    - user : User
+    + getRatingPK()
+    + setRatingPK()
+    + getRating()
+    + setRating()
+    + getCopy()
+    + setCopy()
+    + getUser()
+    + setUser()
+    + hashCode()
+    + equals()
+    + toString()
+}
+class RatingPK {
+    - userId : int
+    - copyId : int
+    + getUserId()
+    + setUserId()
+    + getCopyId()
+    + setCopyId()
+    + hashCode()
+    + equals()
+    + toString()
+}
+class Copy {
+    - copyId : Integer
+    - bookId : Book
+    - rentalList : List<Rental>
+    + getCopyId()
+    + setCopyId()
+    + getBookId()
+    + setBookId()
+    + getRentalList()
+    + setRentalList()
+    + hashCode()
+    + equals()
+    + toString()
+}
+class Rental {
+    - rentalId : Integer
+    - date : Date
+    - due : Date
+    - returnDate : Date
+    - copyId : Copy
+    - userId : User
+    + getRentalId()
+    + setRentalId()
+    + getDate()
+    + setDate()
+    + getDue()
+    + setDue()
+    + getReturnDate()
+    + setReturnDate()
+    + getCopyId()
+    + setCopyId()
+    + getUserId()
+    + setUserId()
+    + hashCode()
+    + equals()
+    + toString()
+}
+@enduml

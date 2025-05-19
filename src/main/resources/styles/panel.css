@@ -1,0 +1,32 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 17 may 2025, 18:53:09
+    Author     : juanje
+*/
+
+.chart-pie-label {
+    -fx-fill: white;
+}
+
+.chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.dashboard-panel {
+    -fx-background-radius: 10;
+    -fx-padding: 20 60;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-spacing: 10;
+    -fx-text-fill: white;
+    -fx-background-color: #2E86C1; /* color por defecto */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0.3, 0, 2);
+}
+
+.dashboard-panel:hover {    
+    -fx-opacity: 0.85; /* efecto aclarado */
+}

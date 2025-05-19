@@ -1,0 +1,58 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 14 may 2025, 16:49:45
+    Author     : juanje
+*/
+
+/* Estilo general del fondo */
+.root {
+    -fx-background-color: #f4f4f4;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Título principal */
+.label {
+    -fx-text-fill: #333333;
+}
+
+/* Estilo del título "Menú principal" */
+#labelTitulo {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222;
+}
+
+/* Estilo del label de fecha/hora */
+#labelFechaHora {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+}
+
+/* Botones con imagen y texto */
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 4, 0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: rgba(74, 144, 226, 0.1);
+}
+
+/* Imagen dentro del botón */
+.button .image-view {
+    -fx-effect: null;
+}
+
+/* Texto debajo de la imagen */
+.button .label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #444;
+}

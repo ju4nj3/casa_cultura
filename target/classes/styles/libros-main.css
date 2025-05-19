@@ -1,0 +1,41 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 14 may 2025, 16:49:45
+    Author     : juanje
+*/
+
+.vbWrapper {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-padding: 20;
+}
+
+.label-titulo-ventana {      
+    -fx-font-size: 24px; 
+    -fx-font-weight: bold;
+}
+
+.label-titulo {
+    -fx-border-color: transparent transparent gainsboro transparent; 
+    -fx-border-width: 0 0 1 0; 
+    -fx-padding: 0 0 4 0;
+    -fx-font-weight: bold; 
+    -fx-font-size: 18px;
+}
+/*
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 4, 0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: rgba(74, 144, 226, 0.1);
+}
+*/

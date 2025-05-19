@@ -1,0 +1,289 @@
+@startuml
+annotation java.lang.Override
+annotation javafx.fxml.FXML
+class com.wearefive.casacultura.App
+class com.wearefive.casacultura.EstadisticasController
+class com.wearefive.casacultura.ItemLibroController
+class com.wearefive.casacultura.LibroController
+class com.wearefive.casacultura.LibrosController
+class com.wearefive.casacultura.LoginController
+class com.wearefive.casacultura.MainController
+class com.wearefive.casacultura.PanelController
+class com.wearefive.casacultura.PrestamosController
+class com.wearefive.casacultura.UsuarioController
+class com.wearefive.casacultura.UsuariosController
+class com.wearefive.casacultura.core.Apriori
+class com.wearefive.casacultura.data.repos.BooksRepository
+class com.wearefive.casacultura.data.repos.RatingsRepository
+class com.wearefive.casacultura.data.repos.RentalsRepository
+class com.wearefive.casacultura.data.repos.UsersRepository
+class com.wearefive.casacultura.entities.Book
+class com.wearefive.casacultura.entities.Copy
+class com.wearefive.casacultura.entities.Genre
+class com.wearefive.casacultura.entities.Rental
+class com.wearefive.casacultura.entities.User
+class java.io.IOException
+class java.time.LocalDateTime
+class java.time.ZoneId
+class java.time.format.DateTimeFormatter
+class java.util.ArrayList
+class java.util.Arrays
+class java.util.Date
+class java.util.HashSet
+class java.util.LinkedHashMap
+class java.util.List
+class java.util.Map
+class java.util.Objects
+class java.util.Optional
+class java.util.Set
+class java.util.stream.Collectors
+class javafx.animation.Animation
+class javafx.animation.KeyFrame
+class javafx.animation.Timeline
+class javafx.application.Application
+class javafx.application.Platform
+class javafx.beans.property.SimpleStringProperty
+class javafx.collections.FXCollections
+class javafx.collections.ObservableList
+class javafx.fxml.FXMLLoader
+class javafx.scene.Cursor
+class javafx.scene.Parent
+class javafx.scene.Scene
+class javafx.scene.chart.BarChart
+class javafx.scene.chart.CategoryAxis
+class javafx.scene.chart.PieChart
+class javafx.scene.chart.XYChart
+class javafx.scene.control.Alert
+class javafx.scene.control.Button
+class javafx.scene.control.ButtonType
+class javafx.scene.control.Label
+class javafx.scene.control.TableCell
+class javafx.scene.control.TableColumn
+class javafx.scene.control.TableRow
+class javafx.scene.control.TableView
+class javafx.scene.control.TextField
+class javafx.scene.control.cell.PropertyValueFactory
+class javafx.scene.image.Image
+class javafx.scene.image.ImageView
+class javafx.scene.layout.AnchorPane
+class javafx.scene.layout.GridPane
+class javafx.scene.layout.VBox
+class javafx.stage.Stage
+class javafx.util.Duration
+class org.apache.commons.lang3.StringUtils
+com.wearefive.casacultura.App ..> java.lang.Override
+com.wearefive.casacultura.App ..> com.wearefive.casacultura.entities.User
+com.wearefive.casacultura.App ..> java.io.IOException
+com.wearefive.casacultura.App --|> javafx.application.Application
+com.wearefive.casacultura.App ..> javafx.fxml.FXMLLoader
+com.wearefive.casacultura.App ..> javafx.scene.Cursor
+com.wearefive.casacultura.App ..> javafx.scene.Parent
+com.wearefive.casacultura.App ..> javafx.scene.Scene
+com.wearefive.casacultura.App ..> javafx.scene.control.Alert
+com.wearefive.casacultura.App ..> javafx.scene.control.ButtonType
+com.wearefive.casacultura.App ..> javafx.stage.Stage
+com.wearefive.casacultura.EstadisticasController ..> javafx.fxml.FXML
+com.wearefive.casacultura.EstadisticasController ..> com.wearefive.casacultura.data.repos.BooksRepository
+com.wearefive.casacultura.EstadisticasController ..> com.wearefive.casacultura.data.repos.RatingsRepository
+com.wearefive.casacultura.EstadisticasController ..> com.wearefive.casacultura.data.repos.RentalsRepository
+com.wearefive.casacultura.EstadisticasController ..> com.wearefive.casacultura.data.repos.UsersRepository
+com.wearefive.casacultura.EstadisticasController ..> com.wearefive.casacultura.entities.Book
+com.wearefive.casacultura.EstadisticasController ..> com.wearefive.casacultura.entities.Rental
+com.wearefive.casacultura.EstadisticasController ..> java.io.IOException
+com.wearefive.casacultura.EstadisticasController ..> java.util.List
+com.wearefive.casacultura.EstadisticasController ..> java.util.Map
+com.wearefive.casacultura.EstadisticasController ..> javafx.collections.FXCollections
+com.wearefive.casacultura.EstadisticasController ..> javafx.collections.ObservableList
+com.wearefive.casacultura.EstadisticasController ..> javafx.scene.chart.BarChart
+com.wearefive.casacultura.EstadisticasController ..> javafx.scene.chart.CategoryAxis
+com.wearefive.casacultura.EstadisticasController ..> javafx.scene.chart.PieChart
+com.wearefive.casacultura.EstadisticasController ..> javafx.scene.chart.XYChart
+com.wearefive.casacultura.ItemLibroController ..> javafx.fxml.FXML
+com.wearefive.casacultura.ItemLibroController ..> com.wearefive.casacultura.entities.Book
+com.wearefive.casacultura.ItemLibroController ..> java.io.IOException
+com.wearefive.casacultura.ItemLibroController ..> javafx.fxml.FXMLLoader
+com.wearefive.casacultura.ItemLibroController ..> javafx.scene.Parent
+com.wearefive.casacultura.ItemLibroController ..> javafx.scene.Scene
+com.wearefive.casacultura.ItemLibroController ..> javafx.scene.control.Label
+com.wearefive.casacultura.ItemLibroController ..> javafx.scene.image.Image
+com.wearefive.casacultura.ItemLibroController ..> javafx.scene.image.ImageView
+com.wearefive.casacultura.ItemLibroController ..> javafx.stage.Stage
+com.wearefive.casacultura.LibroController ..> javafx.fxml.FXML
+com.wearefive.casacultura.LibroController ..> com.wearefive.casacultura.data.repos.RatingsRepository
+com.wearefive.casacultura.LibroController ..> com.wearefive.casacultura.data.repos.RentalsRepository
+com.wearefive.casacultura.LibroController ..> com.wearefive.casacultura.entities.Book
+com.wearefive.casacultura.LibroController ..> com.wearefive.casacultura.entities.Copy
+com.wearefive.casacultura.LibroController ..> com.wearefive.casacultura.entities.Genre
+com.wearefive.casacultura.LibroController ..> com.wearefive.casacultura.entities.Rental
+com.wearefive.casacultura.LibroController ..> java.io.IOException
+com.wearefive.casacultura.LibroController ..> java.time.LocalDateTime
+com.wearefive.casacultura.LibroController ..> java.time.ZoneId
+com.wearefive.casacultura.LibroController ..> java.util.Date
+com.wearefive.casacultura.LibroController ..> java.util.Optional
+com.wearefive.casacultura.LibroController ..> java.util.stream.Collectors
+com.wearefive.casacultura.LibroController ..> javafx.scene.control.Alert
+com.wearefive.casacultura.LibroController ..> javafx.scene.control.Button
+com.wearefive.casacultura.LibroController ..> javafx.scene.control.ButtonType
+com.wearefive.casacultura.LibroController ..> javafx.scene.control.Label
+com.wearefive.casacultura.LibroController ..> javafx.scene.image.Image
+com.wearefive.casacultura.LibroController ..> javafx.scene.image.ImageView
+com.wearefive.casacultura.LibroController ..> javafx.scene.layout.AnchorPane
+com.wearefive.casacultura.LibroController ..> javafx.scene.layout.VBox
+com.wearefive.casacultura.LibroController ..> org.apache.commons.lang3.StringUtils
+com.wearefive.casacultura.LibrosController ..> javafx.fxml.FXML
+com.wearefive.casacultura.LibrosController ..> com.wearefive.casacultura.data.repos.BooksRepository
+com.wearefive.casacultura.LibrosController ..> com.wearefive.casacultura.data.repos.UsersRepository
+com.wearefive.casacultura.LibrosController ..> com.wearefive.casacultura.entities.Book
+com.wearefive.casacultura.LibrosController ..> com.wearefive.casacultura.entities.Genre
+com.wearefive.casacultura.LibrosController ..> java.io.IOException
+com.wearefive.casacultura.LibrosController ..> java.util.stream.Collectors
+com.wearefive.casacultura.LibrosController ..> javafx.application.Platform
+com.wearefive.casacultura.LibrosController ..> javafx.beans.property.SimpleStringProperty
+com.wearefive.casacultura.LibrosController ..> javafx.collections.FXCollections
+com.wearefive.casacultura.LibrosController ..> javafx.collections.ObservableList
+com.wearefive.casacultura.LibrosController ..> javafx.scene.control.Button
+com.wearefive.casacultura.LibrosController ..> javafx.scene.control.TableColumn
+com.wearefive.casacultura.LibrosController ..> javafx.scene.control.TableRow
+com.wearefive.casacultura.LibrosController ..> javafx.scene.control.TableView
+com.wearefive.casacultura.LibrosController ..> javafx.scene.control.TextField
+com.wearefive.casacultura.LibrosController ..> javafx.scene.control.cell.PropertyValueFactory
+com.wearefive.casacultura.LibrosController ..> javafx.scene.layout.AnchorPane
+com.wearefive.casacultura.LoginController ..> javafx.fxml.FXML
+com.wearefive.casacultura.LoginController ..> com.wearefive.casacultura.data.repos.UsersRepository
+com.wearefive.casacultura.LoginController ..> com.wearefive.casacultura.entities.User
+com.wearefive.casacultura.LoginController ..> java.io.IOException
+com.wearefive.casacultura.LoginController ..> javafx.scene.control.Alert
+com.wearefive.casacultura.LoginController ..> javafx.scene.control.TextField
+com.wearefive.casacultura.MainController ..> java.lang.Override
+com.wearefive.casacultura.MainController ..> javafx.fxml.FXML
+com.wearefive.casacultura.MainController ..> com.wearefive.casacultura.core.Apriori
+com.wearefive.casacultura.MainController ..> com.wearefive.casacultura.data.repos.BooksRepository
+com.wearefive.casacultura.MainController ..> com.wearefive.casacultura.data.repos.RentalsRepository
+com.wearefive.casacultura.MainController ..> com.wearefive.casacultura.entities.Book
+com.wearefive.casacultura.MainController ..> com.wearefive.casacultura.entities.Rental
+com.wearefive.casacultura.MainController ..> com.wearefive.casacultura.entities.User
+com.wearefive.casacultura.MainController ..> java.io.IOException
+com.wearefive.casacultura.MainController ..> java.time.LocalDateTime
+com.wearefive.casacultura.MainController ..> java.time.ZoneId
+com.wearefive.casacultura.MainController ..> java.time.format.DateTimeFormatter
+com.wearefive.casacultura.MainController ..> java.util.ArrayList
+com.wearefive.casacultura.MainController ..> java.util.Arrays
+com.wearefive.casacultura.MainController ..> java.util.Date
+com.wearefive.casacultura.MainController ..> java.util.HashSet
+com.wearefive.casacultura.MainController ..> java.util.LinkedHashMap
+com.wearefive.casacultura.MainController ..> java.util.List
+com.wearefive.casacultura.MainController ..> java.util.Map
+com.wearefive.casacultura.MainController ..> java.util.Objects
+com.wearefive.casacultura.MainController ..> java.util.Optional
+com.wearefive.casacultura.MainController ..> java.util.Set
+com.wearefive.casacultura.MainController ..> java.util.stream.Collectors
+com.wearefive.casacultura.MainController ..> javafx.animation.Animation
+com.wearefive.casacultura.MainController ..> javafx.animation.KeyFrame
+com.wearefive.casacultura.MainController ..> javafx.animation.Timeline
+com.wearefive.casacultura.MainController ..> javafx.beans.property.SimpleStringProperty
+com.wearefive.casacultura.MainController ..> javafx.collections.FXCollections
+com.wearefive.casacultura.MainController ..> javafx.fxml.FXMLLoader
+com.wearefive.casacultura.MainController ..> javafx.scene.Parent
+com.wearefive.casacultura.MainController ..> javafx.scene.control.Alert
+com.wearefive.casacultura.MainController ..> javafx.scene.control.Button
+com.wearefive.casacultura.MainController ..> javafx.scene.control.ButtonType
+com.wearefive.casacultura.MainController ..> javafx.scene.control.Label
+com.wearefive.casacultura.MainController ..> javafx.scene.control.TableCell
+com.wearefive.casacultura.MainController ..> javafx.scene.control.TableColumn
+com.wearefive.casacultura.MainController ..> javafx.scene.control.TableView
+com.wearefive.casacultura.MainController ..> javafx.scene.control.cell.PropertyValueFactory
+com.wearefive.casacultura.MainController ..> javafx.scene.image.Image
+com.wearefive.casacultura.MainController ..> javafx.scene.image.ImageView
+com.wearefive.casacultura.MainController ..> javafx.scene.layout.GridPane
+com.wearefive.casacultura.MainController ..> javafx.util.Duration
+com.wearefive.casacultura.PanelController ..> java.lang.Override
+com.wearefive.casacultura.PanelController ..> javafx.fxml.FXML
+com.wearefive.casacultura.PanelController ..> com.wearefive.casacultura.data.repos.BooksRepository
+com.wearefive.casacultura.PanelController ..> com.wearefive.casacultura.data.repos.RatingsRepository
+com.wearefive.casacultura.PanelController ..> com.wearefive.casacultura.data.repos.RentalsRepository
+com.wearefive.casacultura.PanelController ..> com.wearefive.casacultura.data.repos.UsersRepository
+com.wearefive.casacultura.PanelController ..> com.wearefive.casacultura.entities.Book
+com.wearefive.casacultura.PanelController ..> com.wearefive.casacultura.entities.Rental
+com.wearefive.casacultura.PanelController ..> java.io.IOException
+com.wearefive.casacultura.PanelController ..> java.time.LocalDateTime
+com.wearefive.casacultura.PanelController ..> java.time.ZoneId
+com.wearefive.casacultura.PanelController ..> java.time.format.DateTimeFormatter
+com.wearefive.casacultura.PanelController ..> java.util.Date
+com.wearefive.casacultura.PanelController ..> java.util.List
+com.wearefive.casacultura.PanelController ..> java.util.Map
+com.wearefive.casacultura.PanelController ..> java.util.Optional
+com.wearefive.casacultura.PanelController ..> javafx.animation.Animation
+com.wearefive.casacultura.PanelController ..> javafx.animation.KeyFrame
+com.wearefive.casacultura.PanelController ..> javafx.animation.Timeline
+com.wearefive.casacultura.PanelController ..> javafx.beans.property.SimpleStringProperty
+com.wearefive.casacultura.PanelController ..> javafx.collections.FXCollections
+com.wearefive.casacultura.PanelController ..> javafx.collections.ObservableList
+com.wearefive.casacultura.PanelController ..> javafx.fxml.FXMLLoader
+com.wearefive.casacultura.PanelController ..> javafx.scene.Parent
+com.wearefive.casacultura.PanelController ..> javafx.scene.chart.PieChart
+com.wearefive.casacultura.PanelController ..> javafx.scene.control.Alert
+com.wearefive.casacultura.PanelController ..> javafx.scene.control.Button
+com.wearefive.casacultura.PanelController ..> javafx.scene.control.ButtonType
+com.wearefive.casacultura.PanelController ..> javafx.scene.control.Label
+com.wearefive.casacultura.PanelController ..> javafx.scene.control.TableCell
+com.wearefive.casacultura.PanelController ..> javafx.scene.control.TableColumn
+com.wearefive.casacultura.PanelController ..> javafx.scene.control.TableView
+com.wearefive.casacultura.PanelController ..> javafx.scene.control.cell.PropertyValueFactory
+com.wearefive.casacultura.PanelController ..> javafx.scene.image.Image
+com.wearefive.casacultura.PanelController ..> javafx.scene.image.ImageView
+com.wearefive.casacultura.PanelController ..> javafx.scene.layout.GridPane
+com.wearefive.casacultura.PanelController ..> javafx.util.Duration
+com.wearefive.casacultura.PrestamosController ..> java.lang.Override
+com.wearefive.casacultura.PrestamosController ..> javafx.fxml.FXML
+com.wearefive.casacultura.PrestamosController ..> com.wearefive.casacultura.data.repos.BooksRepository
+com.wearefive.casacultura.PrestamosController ..> com.wearefive.casacultura.data.repos.RentalsRepository
+com.wearefive.casacultura.PrestamosController ..> com.wearefive.casacultura.entities.Book
+com.wearefive.casacultura.PrestamosController ..> com.wearefive.casacultura.entities.Genre
+com.wearefive.casacultura.PrestamosController ..> com.wearefive.casacultura.entities.Rental
+com.wearefive.casacultura.PrestamosController ..> java.io.IOException
+com.wearefive.casacultura.PrestamosController ..> java.time.ZoneId
+com.wearefive.casacultura.PrestamosController ..> java.time.format.DateTimeFormatter
+com.wearefive.casacultura.PrestamosController ..> java.util.Date
+com.wearefive.casacultura.PrestamosController ..> java.util.Optional
+com.wearefive.casacultura.PrestamosController ..> java.util.stream.Collectors
+com.wearefive.casacultura.PrestamosController ..> javafx.application.Platform
+com.wearefive.casacultura.PrestamosController ..> javafx.beans.property.SimpleStringProperty
+com.wearefive.casacultura.PrestamosController ..> javafx.collections.FXCollections
+com.wearefive.casacultura.PrestamosController ..> javafx.collections.ObservableList
+com.wearefive.casacultura.PrestamosController ..> javafx.scene.control.Alert
+com.wearefive.casacultura.PrestamosController ..> javafx.scene.control.Button
+com.wearefive.casacultura.PrestamosController ..> javafx.scene.control.ButtonType
+com.wearefive.casacultura.PrestamosController ..> javafx.scene.control.TableCell
+com.wearefive.casacultura.PrestamosController ..> javafx.scene.control.TableColumn
+com.wearefive.casacultura.PrestamosController ..> javafx.scene.control.TableView
+com.wearefive.casacultura.PrestamosController ..> javafx.scene.control.TextField
+com.wearefive.casacultura.PrestamosController ..> javafx.scene.control.cell.PropertyValueFactory
+com.wearefive.casacultura.UsuarioController ..> javafx.fxml.FXML
+com.wearefive.casacultura.UsuarioController ..> com.wearefive.casacultura.data.repos.RentalsRepository
+com.wearefive.casacultura.UsuarioController ..> com.wearefive.casacultura.entities.Rental
+com.wearefive.casacultura.UsuarioController ..> com.wearefive.casacultura.entities.User
+com.wearefive.casacultura.UsuarioController ..> java.io.IOException
+com.wearefive.casacultura.UsuarioController ..> java.time.ZoneId
+com.wearefive.casacultura.UsuarioController ..> java.time.format.DateTimeFormatter
+com.wearefive.casacultura.UsuarioController ..> java.util.Date
+com.wearefive.casacultura.UsuarioController ..> javafx.beans.property.SimpleStringProperty
+com.wearefive.casacultura.UsuarioController ..> javafx.collections.FXCollections
+com.wearefive.casacultura.UsuarioController ..> javafx.scene.control.Label
+com.wearefive.casacultura.UsuarioController ..> javafx.scene.control.TableColumn
+com.wearefive.casacultura.UsuarioController ..> javafx.scene.control.TableView
+com.wearefive.casacultura.UsuarioController ..> javafx.scene.control.cell.PropertyValueFactory
+com.wearefive.casacultura.UsuarioController ..> javafx.scene.image.Image
+com.wearefive.casacultura.UsuarioController ..> javafx.scene.image.ImageView
+com.wearefive.casacultura.UsuariosController ..> javafx.fxml.FXML
+com.wearefive.casacultura.UsuariosController ..> com.wearefive.casacultura.data.repos.UsersRepository
+com.wearefive.casacultura.UsuariosController ..> com.wearefive.casacultura.entities.User
+com.wearefive.casacultura.UsuariosController ..> java.io.IOException
+com.wearefive.casacultura.UsuariosController ..> javafx.application.Platform
+com.wearefive.casacultura.UsuariosController ..> javafx.collections.FXCollections
+com.wearefive.casacultura.UsuariosController ..> javafx.collections.ObservableList
+com.wearefive.casacultura.UsuariosController ..> javafx.scene.control.TableColumn
+com.wearefive.casacultura.UsuariosController ..> javafx.scene.control.TableRow
+com.wearefive.casacultura.UsuariosController ..> javafx.scene.control.TableView
+com.wearefive.casacultura.UsuariosController ..> javafx.scene.control.TextField
+com.wearefive.casacultura.UsuariosController ..> javafx.scene.control.cell.PropertyValueFactory
+@enduml

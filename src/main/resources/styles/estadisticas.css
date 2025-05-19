@@ -1,0 +1,25 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 17 may 2025, 18:53:09
+    Author     : juanje
+*/
+
+/*
+.chart-pie-label {
+    -fx-fill: white;
+}
+
+.chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+*/
+
+.vbox-panel {
+    -fx-background-color: rgba(255,255,255,0.9); 
+    -fx-background-radius: 10; 
+    -fx-padding: 10;
+}

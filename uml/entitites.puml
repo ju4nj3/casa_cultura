@@ -1,0 +1,118 @@
+@startuml
+annotation java.lang.Override
+annotation javax.persistence.Basic
+annotation javax.persistence.Column
+annotation javax.persistence.Embeddable
+annotation javax.persistence.EmbeddedId
+annotation javax.persistence.Entity
+annotation javax.persistence.GeneratedValue
+annotation javax.persistence.Id
+annotation javax.persistence.JoinColumn
+annotation javax.persistence.JoinTable
+annotation javax.persistence.ManyToMany
+annotation javax.persistence.ManyToOne
+annotation javax.persistence.NamedQueries
+annotation javax.persistence.NamedQuery
+annotation javax.persistence.OneToMany
+annotation javax.persistence.Table
+annotation javax.persistence.Temporal
+class com.wearefive.casacultura.entities.Book
+class com.wearefive.casacultura.entities.Copy
+class com.wearefive.casacultura.entities.Genre
+class com.wearefive.casacultura.entities.Rating
+class com.wearefive.casacultura.entities.RatingPK
+class com.wearefive.casacultura.entities.Rental
+class com.wearefive.casacultura.entities.User
+class java.util.Date
+class java.util.List
+class javax.persistence.CascadeType
+class javax.persistence.GenerationType
+class javax.persistence.TemporalType
+interface java.io.Serializable
+com.wearefive.casacultura.entities.Book ..> java.lang.Override
+com.wearefive.casacultura.entities.Book ..> javax.persistence.Basic
+com.wearefive.casacultura.entities.Book ..> javax.persistence.Column
+com.wearefive.casacultura.entities.Book ..> javax.persistence.Entity
+com.wearefive.casacultura.entities.Book ..> javax.persistence.Id
+com.wearefive.casacultura.entities.Book ..> javax.persistence.JoinColumn
+com.wearefive.casacultura.entities.Book ..> javax.persistence.JoinTable
+com.wearefive.casacultura.entities.Book ..> javax.persistence.ManyToMany
+com.wearefive.casacultura.entities.Book ..> javax.persistence.NamedQueries
+com.wearefive.casacultura.entities.Book ..> javax.persistence.NamedQuery
+com.wearefive.casacultura.entities.Book ..> javax.persistence.OneToMany
+com.wearefive.casacultura.entities.Book ..> javax.persistence.Table
+com.wearefive.casacultura.entities.Book ..> java.util.List
+com.wearefive.casacultura.entities.Book ..> javax.persistence.CascadeType
+com.wearefive.casacultura.entities.Book --|> java.io.Serializable
+com.wearefive.casacultura.entities.Copy ..> java.lang.Override
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.Basic
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.Column
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.Entity
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.Id
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.JoinColumn
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.ManyToOne
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.NamedQueries
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.NamedQuery
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.OneToMany
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.Table
+com.wearefive.casacultura.entities.Copy ..> java.util.List
+com.wearefive.casacultura.entities.Copy ..> javax.persistence.CascadeType
+com.wearefive.casacultura.entities.Copy --|> java.io.Serializable
+com.wearefive.casacultura.entities.Genre ..> java.lang.Override
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.Basic
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.Column
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.Entity
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.GeneratedValue
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.Id
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.ManyToMany
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.NamedQueries
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.NamedQuery
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.Table
+com.wearefive.casacultura.entities.Genre ..> java.util.List
+com.wearefive.casacultura.entities.Genre ..> javax.persistence.GenerationType
+com.wearefive.casacultura.entities.Genre --|> java.io.Serializable
+com.wearefive.casacultura.entities.Rating ..> java.lang.Override
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.Basic
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.Column
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.EmbeddedId
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.Entity
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.JoinColumn
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.ManyToOne
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.NamedQueries
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.NamedQuery
+com.wearefive.casacultura.entities.Rating ..> javax.persistence.Table
+com.wearefive.casacultura.entities.Rating --|> java.io.Serializable
+com.wearefive.casacultura.entities.RatingPK ..> java.lang.Override
+com.wearefive.casacultura.entities.RatingPK ..> javax.persistence.Basic
+com.wearefive.casacultura.entities.RatingPK ..> javax.persistence.Column
+com.wearefive.casacultura.entities.RatingPK ..> javax.persistence.Embeddable
+com.wearefive.casacultura.entities.RatingPK --|> java.io.Serializable
+com.wearefive.casacultura.entities.Rental ..> java.lang.Override
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.Basic
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.Column
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.Entity
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.GeneratedValue
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.Id
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.JoinColumn
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.ManyToOne
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.NamedQueries
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.NamedQuery
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.Table
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.Temporal
+com.wearefive.casacultura.entities.Rental ..> java.util.Date
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.GenerationType
+com.wearefive.casacultura.entities.Rental ..> javax.persistence.TemporalType
+com.wearefive.casacultura.entities.Rental --|> java.io.Serializable
+com.wearefive.casacultura.entities.User ..> java.lang.Override
+com.wearefive.casacultura.entities.User ..> javax.persistence.Basic
+com.wearefive.casacultura.entities.User ..> javax.persistence.Column
+com.wearefive.casacultura.entities.User ..> javax.persistence.Entity
+com.wearefive.casacultura.entities.User ..> javax.persistence.Id
+com.wearefive.casacultura.entities.User ..> javax.persistence.NamedQueries
+com.wearefive.casacultura.entities.User ..> javax.persistence.NamedQuery
+com.wearefive.casacultura.entities.User ..> javax.persistence.OneToMany
+com.wearefive.casacultura.entities.User ..> javax.persistence.Table
+com.wearefive.casacultura.entities.User ..> java.util.List
+com.wearefive.casacultura.entities.User ..> javax.persistence.CascadeType
+com.wearefive.casacultura.entities.User --|> java.io.Serializable
+@enduml
